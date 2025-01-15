@@ -8,7 +8,7 @@
     {% endif %}
     <div class="row">
         {% for pokemon in pokemons %}
-        <div class="col-sm-3">
+        <div class="col-sm-4">
          <br>
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{ pokemon.picture.url }}" alt="Card image cap">
@@ -31,12 +31,4 @@
           </div>
         {% endfor %}
     </div>
-    <h3> Entrenadores </h3>
-    <ul class="list-group">
-        {% for trainer in trainers %}
-        <li class="list-group-item">
-            <a href="trainer/{{trainer.id}}">{{ trainer | capfirst }}</a>
-        </li>
-        {% endfor %}
-    </ul>
 {% endblock content %}
